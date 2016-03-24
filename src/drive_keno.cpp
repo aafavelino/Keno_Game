@@ -92,7 +92,7 @@
 						//Enquanto a leitura da stream não estiver no fim do arquivo continua executando 
 						while(!b_stream.eof())
 						{	//Aqui e feita a comparacao se realmente a stream passada e do tipo float, se for entra no if colhendo as apostas e validando  
-							if(b_stream >> aux_f)
+							if(b_stream >> aux_f && aux_f > 0)
 							{
 								actualBet.setWage(aux_f);
 								valido = true;
@@ -118,8 +118,8 @@
 					{
 						std::stringstream r_stream(linha);
 						while(!r_stream.eof())
-						{	//Aqui e feita a comparacao se realmente a stream passada e do tipo int, se for entra no if colhendo as rodadas
-							if(r_stream >> aux)
+						{	//Aqui e feita a comparacao se realmente a stream passada e do tipo int e maior que 0, se for entra no if colhendo as rodadas
+							if(r_stream >> aux && aux > 0)
 							{
 								rodadas = aux;
 								valido = true;
@@ -150,18 +150,23 @@
 						for (int i = 0; i < 15 && !f_stream.eof();)
 						{
 							//Enquanto a leitura da stream não estiver no fim do arquivo continua executando 
-                 	        while((f_stream >> aux) && i < 15)
-                 	        {
-                	               actualBet.addNumber(aux);
-                	               ++i;
-                	               valido=true;
-                	        }
+                	        while((f_stream >> aux) && i < 15)
+                            {
+                                if(actualBet.addNumber(aux))
+                                {
+                                    ++i;
+                                    valido=true;
+                                          
+                	         	}
+                	    	}
+
                 	        //Caso a leitura seja invalida o valor e passado para uma variavel lixo
                 	        if(f_stream.fail())
-                	        {
+                	        { 
                 	               f_stream.clear();
                 	               std::string substitute;
                 	               f_stream >> substitute;
+
                 	        }
 	
 						}
@@ -188,7 +193,10 @@
 			//Jogo rodando e mostrando o que esta acontecendo
 				std::cout << "---------------------------------------------------------------------------------------"<< std::endl;
 				std::cout << ">>> Aposta lida com sucesso!"<< std::endl;
-				std::cout << "Você está apostando um total de R$ " << actualBet.getWage() << " reais" << std::endl;
+				//Usado para fixar apenas 2 números após a virgula.
+				std::cout.precision(2);
+				std::cout << std::fixed;
+				std::cout << "Você está apostando um total de R$ "<< actualBet.getWage() << " reais" << std::endl;
 				std::cout << "Você está indo para um total de "<< rodadas << " rodadas, cada uma valendo R$ " << actualBet.getWage()/rodadas<< " reais" << std::endl;
 				std::cout << std::endl;
 
@@ -199,20 +207,23 @@
 					for (int i = 0; i < numeros_apostados.size(); ++i) std::cout << numeros_apostados[i] << " ";
 				std::cout << "]"<< std::endl;
 
+				std::cout.precision(1);
+				std::cout << std::fixed;
 				std::cout << std::endl;
-				std::cout << "------+--------"<< std::endl;
-				std::cout << "Hits  | Payout"<< std::endl;
-				std::cout << "------+--------"<< std::endl;
+				std::cout << "-------+--------"<< std::endl;
+				std::cout << "|Hits  | Payout|"<< std::endl;
+				std::cout << "-------+--------"<< std::endl;
 				for (int i = 0; i <= numeros_apostados.size(); ++i)
-				std::cout << i <<"       "<< ganhosPorAposta[numeros_apostados.size() - 1][i]<< std::endl;
+				std::cout << i << "\t" << ganhosPorAposta[numeros_apostados.size() - 1][i]<< std::endl;
 
 
 				//Rodadas...
-
+				std::cout.precision(2);
+				std::cout << std::fixed;
 				for (int i = 1; i <= rodadas; ++i)
 				{
-					std::cout << "--------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
-					std::cout << "Esta é a rodada #"<< i << " de " << rodadas <<", valendo R$" << apostaPorRodada << ". Boa sorte!" << std::endl;
+					std::cout << "----------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
+					std::cout << "Esta é a rodada #"<< i << " de " << rodadas <<", valendo R$ " << apostaPorRodada << ". Boa sorte!" << std::endl;
 					std::cout << "Os números sorteados são: [ ";
 						unsigned tempo = std::chrono::system_clock::now().time_since_epoch().count();
 
@@ -262,7 +273,7 @@
 				
 				actualBet.getWage() > apostaNaRodada ? final = apostaNaRodada - actualBet.getWage()  : final = apostaNaRodada - actualBet.getWage();
 
-				std::cout << "================== Resumo ==================" << std::endl;
+				std::cout << "============================================================================ Resumo ============================================================================" << std::endl;
 				std::cout << ">>> Você apostou neste jogo um total de: " << actualBet.getWage() << std::endl;
 				if (final  > 0)
 				{
