@@ -92,4 +92,3 @@
     {
         return m_spots.size();
     }
-
