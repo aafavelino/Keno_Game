@@ -3,7 +3,7 @@ Keno Game
 
 Versão 1.0.0 - Quarta-Feira 23 de março de 2016
 
-por Adelino Afonso Avelino Fernandes e Yuri Reinaldo da Silva  
+por Adelino Afonso Fernandes Avelino e Yuri Reinaldo da Silva  
 
 
 Introdução
@@ -66,3 +66,21 @@ Caso os valores de créditos, rodadas e números apostados sejam
 inseridos na mesma linha, é possível que não seja feita a leitura de 
 todos. Portanto, é imprescindível que estas três características 
 estejam em linhas diferentes.
+
+Exemplo de uma aposta padrão:
+
+1500 - Sendo o valor apostado
+4 - Quantidade de rodadas
+1 2 2 4 5 6 7 8 9 10 11 23 33 50 60 - Números apostados
+
+Exemplo de uma aposta válida:
+
+as
+das
+das
+dasd
+1500 a a a
+-2 4
+
+1 2 2 4 -1 5 6 7 8 9 10 '11' '23' 33 50 60
+
