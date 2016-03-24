@@ -43,14 +43,14 @@
 	         q++;        
 	        }  
 	    }
-	    if(q-1 > ini)
-	    {
-	        quicksort(vetor, ini, q-1);
-	    }
-	    if(q+1 < fim)
-	    {
-	        quicksort(vetor, q+1, fim);
-	    }
+		    if(q-1 > ini)
+		    {
+		        quicksort(vetor, ini, q-1);
+		    }
+		    if(q+1 < fim)
+		    {
+		        quicksort(vetor, q+1, fim);
+		    }
 	 }
 
 
