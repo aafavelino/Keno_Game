@@ -1,0 +1,116 @@
+\hypertarget{class_keno_bet}{}\section{Keno\+Bet Class Reference}
+\label{class_keno_bet}\index{Keno\+Bet@{Keno\+Bet}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Keno\+Bet} (unsigned int \+\_\+max\+Num\+Spots=15)\hypertarget{class_keno_bet_a499e1a938d0dee8d5cb91d032851bdda}{}\label{class_keno_bet_a499e1a938d0dee8d5cb91d032851bdda}
+
+\item 
+float \hyperlink{class_keno_bet_a004aae494dff90ba8b97e0d2f422de60}{get\+Wage} (void) const 
+\item 
+std\+::vector$<$ int $>$ \hyperlink{class_keno_bet_a21292f83047adbf6478f31a5fe5dc901}{get\+Hits} (const std\+::vector$<$ int $>$ \&\+\_\+hits) const 
+\item 
+std\+::vector$<$ int $>$ \hyperlink{class_keno_bet_a219a00440238516ab80f4471dd84f812}{get\+Spots} (void) const 
+\item 
+bool \hyperlink{class_keno_bet_ae647be06e566e6a0d4c766a9f9e5a61c}{set\+Wage} (float=0.\+0)
+\item 
+void \hyperlink{class_keno_bet_acc2afd4d502e44fdfbb122f3389bc633}{reset} (void)
+\item 
+bool \hyperlink{class_keno_bet_a4302a2ea194138338de0420463188ede}{add\+Number} (int \+\_\+spot)
+\item 
+std\+::size\+\_\+t \hyperlink{class_keno_bet_a65f3e4d2710ab66a410a0432b5988c24}{num\+Chosen} (void) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Keno\+Bet@{Keno\+Bet}!add\+Number@{add\+Number}}
+\index{add\+Number@{add\+Number}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{add\+Number(int \+\_\+spot)}{addNumber(int _spot)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Keno\+Bet\+::add\+Number (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+spot}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keno_bet_a4302a2ea194138338de0420463188ede}{}\label{class_keno_bet_a4302a2ea194138338de0420463188ede}
+Adiciona um numero aos valores apostados somente se o valor não estiver lá. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+spot} & O valor que desejamos incluir na aposta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T Se o número escolhido é inserido com sucesso; F caso contrário. 
+\end{DoxyReturn}
+\index{Keno\+Bet@{Keno\+Bet}!get\+Hits@{get\+Hits}}
+\index{get\+Hits@{get\+Hits}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{get\+Hits(const std\+::vector$<$ int $>$ \&\+\_\+hits) const }{getHits(const std::vector< int > &_hits) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ int $>$ Keno\+Bet\+::get\+Hits (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{\+\_\+hits}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_keno_bet_a21292f83047adbf6478f31a5fe5dc901}{}\label{class_keno_bet_a21292f83047adbf6478f31a5fe5dc901}
+Determina quantos valores apostados combinam com os valores de resultado passados como parâmetro. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+hits} & Lista de resultados aleatoriamente gerados pelo computador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vector com a lista de acertos. 
+\end{DoxyReturn}
+\index{Keno\+Bet@{Keno\+Bet}!get\+Spots@{get\+Spots}}
+\index{get\+Spots@{get\+Spots}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{get\+Spots(void) const }{getSpots(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ int $>$ Keno\+Bet\+::get\+Spots (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_keno_bet_a219a00440238516ab80f4471dd84f812}{}\label{class_keno_bet_a219a00440238516ab80f4471dd84f812}
+Retorna um vector$<$int$>$ com os valores apostados que o jogador escolheu até então. \begin{DoxyReturn}{Returns}
+O vector$<$int$>$ com os valores apostados que o jogador escolheu até então. 
+\end{DoxyReturn}
+\index{Keno\+Bet@{Keno\+Bet}!get\+Wage@{get\+Wage}}
+\index{get\+Wage@{get\+Wage}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{get\+Wage(void) const }{getWage(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}float Keno\+Bet\+::get\+Wage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_keno_bet_a004aae494dff90ba8b97e0d2f422de60}{}\label{class_keno_bet_a004aae494dff90ba8b97e0d2f422de60}
+Retorna o valor do investimento nessa aposta. \begin{DoxyReturn}{Returns}
+o valor investido. 
+\end{DoxyReturn}
+\index{Keno\+Bet@{Keno\+Bet}!num\+Chosen@{num\+Chosen}}
+\index{num\+Chosen@{num\+Chosen}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{num\+Chosen(void) const }{numChosen(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t Keno\+Bet\+::num\+Chosen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_keno_bet_a65f3e4d2710ab66a410a0432b5988c24}{}\label{class_keno_bet_a65f3e4d2710ab66a410a0432b5988c24}
+Retorna o número atual de valores na aposta do jogador. \begin{DoxyReturn}{Returns}
+número atual de valores na aposta do jogador. 
+\end{DoxyReturn}
+\index{Keno\+Bet@{Keno\+Bet}!reset@{reset}}
+\index{reset@{reset}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{reset(void)}{reset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Keno\+Bet\+::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keno_bet_acc2afd4d502e44fdfbb122f3389bc633}{}\label{class_keno_bet_acc2afd4d502e44fdfbb122f3389bc633}
+Reinicie a aposta para um estado vazio \begin{DoxyReturn}{Returns}
+nada 
+\end{DoxyReturn}
+\index{Keno\+Bet@{Keno\+Bet}!set\+Wage@{set\+Wage}}
+\index{set\+Wage@{set\+Wage}!Keno\+Bet@{Keno\+Bet}}
+\subsubsection[{\texorpdfstring{set\+Wage(float=0.\+0)}{setWage(float=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Keno\+Bet\+::set\+Wage (
+\begin{DoxyParamCaption}
+\item[{float}]{\+\_\+wage = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keno_bet_ae647be06e566e6a0d4c766a9f9e5a61c}{}\label{class_keno_bet_ae647be06e566e6a0d4c766a9f9e5a61c}
+Sets Define a quantidade de dinheiro que o jogador está investindo. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+wage} & O investimento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True se existir um valor acima de zero; false caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{keno__c_8h}{keno\+\_\+c.\+h}\item 
+src/\hyperlink{keno__c_8cpp}{keno\+\_\+c.\+cpp}\end{DoxyCompactItemize}

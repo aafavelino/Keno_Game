@@ -1,0 +1,56 @@
+\hypertarget{keno__func_8cpp}{}\section{src/keno\+\_\+func.cpp File Reference}
+\label{keno__func_8cpp}\index{src/keno\+\_\+func.\+cpp@{src/keno\+\_\+func.\+cpp}}
+
+
+Arquivo com as funcoes utilizadas no programa.  
+
+
+{\ttfamily \#include \char`\"{}keno\+\_\+c.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{keno__func_8cpp_a1f453bea84cbf6bf6a558bcc4b02e129}{In\+Array} (int candidate, std\+::vector$<$ int $>$ \&actual\+Vec)
+\item 
+void \hyperlink{keno__func_8cpp_a5d648f8f23b7fd5cb88fefceaf4f5b3c}{quicksort} (std\+::vector$<$ int $>$ \&vetor, int ini, int fim)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo com as funcoes utilizadas no programa. 
+
+Arquivo com as funcoes auxiliares utilizadas no programa, para verificacoes ou organizacao do codigo. 
+
+\subsection{Function Documentation}
+\index{keno\+\_\+func.\+cpp@{keno\+\_\+func.\+cpp}!In\+Array@{In\+Array}}
+\index{In\+Array@{In\+Array}!keno\+\_\+func.\+cpp@{keno\+\_\+func.\+cpp}}
+\subsubsection[{\texorpdfstring{In\+Array(int candidate, std\+::vector$<$ int $>$ \&actual\+Vec)}{InArray(int candidate, std::vector< int > &actualVec)}}]{\setlength{\rightskip}{0pt plus 5cm}bool In\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{candidate, }
+\item[{std\+::vector$<$ int $>$ \&}]{actual\+Vec}
+\end{DoxyParamCaption}
+)}\hypertarget{keno__func_8cpp_a1f453bea84cbf6bf6a558bcc4b02e129}{}\label{keno__func_8cpp_a1f453bea84cbf6bf6a558bcc4b02e129}
+Funcao usada para verificar se um determinado numero ja esta no vetor. 
+\begin{DoxyParams}{Parameters}
+{\em candidate} & Valor a ser verificado. \\
+\hline
+{\em actual\+Vec} & Vetor do tipo vector com os numeros que se encontram na linha da aposta. \\
+\hline
+\end{DoxyParams}
+\index{keno\+\_\+func.\+cpp@{keno\+\_\+func.\+cpp}!quicksort@{quicksort}}
+\index{quicksort@{quicksort}!keno\+\_\+func.\+cpp@{keno\+\_\+func.\+cpp}}
+\subsubsection[{\texorpdfstring{quicksort(std\+::vector$<$ int $>$ \&vetor, int ini, int fim)}{quicksort(std::vector< int > &vetor, int ini, int fim)}}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{vetor, }
+\item[{int}]{ini, }
+\item[{int}]{fim}
+\end{DoxyParamCaption}
+)}\hypertarget{keno__func_8cpp_a5d648f8f23b7fd5cb88fefceaf4f5b3c}{}\label{keno__func_8cpp_a5d648f8f23b7fd5cb88fefceaf4f5b3c}
+A estratégia consiste em rearranjar as chaves \textquotesingle{}q\textquotesingle{} de modo que as chaves \char`\"{}menores\char`\"{} precedam as chaves \char`\"{}maiores\char`\"{}. Em seguida o quicksort ordena as duas sublistas de chaves menores e maiores ate que o vetor se encontre ordenado. 
+\begin{DoxyParams}{Parameters}
+{\em vetor} & Vetor passado por referencia para ser ordenado. \\
+\hline
+{\em ini} & Valor inicial do vetor mais a esquerda. \\
+\hline
+{\em fim} & Valor final do vetor mais a direita. \\
+\hline
+\end{DoxyParams}
