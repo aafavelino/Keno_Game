@@ -10,7 +10,7 @@
     // Funcao usada para verificar se um determinado numero ja esta no vetor.
     // @param candidate Valor a ser verificado.
     // @param actualVec Vetor do tipo vector com os numeros que se encontram na linha da aposta.
-	bool InArray( int candidate, std::vector<int>& actualVec )
+	bool InArray(const int &candidate, std::vector<int>& actualVec )
 	{
 	    for(auto i (0u); i < actualVec.size(); ++i)
     	{
